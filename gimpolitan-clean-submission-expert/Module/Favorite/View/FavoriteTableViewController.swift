@@ -7,11 +7,19 @@
 
 import UIKit
 import RxSwift
+import Game
+import Core
+import Favorite
 
 class FavoriteTableViewController: UITableViewController {
     
     let searchController = UISearchController(searchResultsController: nil)
-    var presenter: FavoritePresenter?
+    var presenter: GetListPresenter
+    < String,
+      GameModel,
+      Interactor < String,
+                   [GameModel],
+                   GetFavoritesRepository < FavoriteLocalDataSource, FavoriteTransformer > > >?
     var games = [GameModel]()
     var disposeBag = DisposeBag()
     var timer: Timer?
@@ -27,11 +35,7 @@ class FavoriteTableViewController: UITableViewController {
         fetchFavorites()
     }
     private func fetchFavorites(name: String? = nil) {
-        if let searchByname = name {
-            presenter?.serchGames(name: searchByname)
-        } else {
-            presenter?.getFavotiteGames()
-        }
+        presenter?.getList(request: name)
     }
     private func bindToNavigationView() {
         title = "Favorites"
@@ -41,9 +45,10 @@ class FavoriteTableViewController: UITableViewController {
     }
     
     private func bindSubcriber() {
-        presenter?.games.subscribe(
+        presenter?.list.subscribe(
             onNext: { games in
                 self.games = games
+                print(games)
                 self.tableView.reloadData()
             }
         ).disposed(by: disposeBag)
@@ -79,7 +84,9 @@ class FavoriteTableViewController: UITableViewController {
         return UITableViewCell()
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        presenter?.goToDetailView(navigationContoller: self.navigationController, idGame: games[indexPath.row].idGame)
+        let detailViewController = FavoriteRouter.makeDetailView(idGame: games[indexPath.row].id)
+        
+        self.navigationController?.pushViewController(detailViewController, animated: true)
     }
 }
 

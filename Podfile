@@ -1,21 +1,34 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
-target 'gimpolitan-clean-submission-expert' do
-  # Comment the next line if you don't want to use dynamic frameworks
-  use_frameworks!
+use_frameworks!
 
-  # Pods for gimpolitan-clean-submission-expert
-  pod 'SwiftLint'
-  pod 'Alamofire', '~> 5.4'
-  pod 'RxSwift', '6.2.0'
-  pod 'RxCocoa', '6.2.0'
-  pod 'Swinject', '2.6.0' 
-  pod 'SDWebImage', '~> 5.0'
-  pod 'RealmSwift', '~>10'
+workspace 'Modularization'
 
+  target 'gimpolitan-clean-submission-expert' do
+    # Pods for gimpolitan-clean-submission-expert
+    pod 'SwiftLint'
+    pod 'Alamofire', '~> 5.4'
+    pod 'RxSwift', '6.2.0'
+    pod 'RxCocoa', '6.2.0'
+    pod 'SDWebImage', '~> 5.0'
+    pod 'RealmSwift', '~>10'
 
+  target 'Game' do
+    project '../Game/Game'
+  end
 
+  target 'Favorite' do
+    project '../favorite/Favorite'
+  end
+
+  target 'Core' do
+    project '../Core/Core'
+  end
+
+  target 'Common' do
+    project '../Common/Common'
+  end
 
   target 'gimpolitan-clean-submission-expertTests' do
     inherit! :search_paths

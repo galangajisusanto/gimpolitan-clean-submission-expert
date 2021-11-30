@@ -7,6 +7,10 @@
 
 import UIKit
 import RxSwift
+import Core
+import Game
+import CloudKit
+import Favorite
 
 class GameDetailViewController: UIViewController {
     
@@ -19,7 +23,14 @@ class GameDetailViewController: UIViewController {
     var favoriteButton: UIBarButtonItem?
     var unfavoriteButton: UIBarButtonItem?
     var gameDetail: GameDetailModel?
-    var presenter: DetailPresenter?
+    
+    var presenter: DetailGamePresenter<
+        Interactor<String, GameDetailModel, GetGameDetailRepository< GetGameDetailRemoteDataSource, GameDetailTransformer>>,
+        Interactor<GameDetailModel, Bool, AddFavoriteRepository< FavoriteLocalDataSource, AddFavoriteTransformer>>,
+        Interactor<String, Bool, DeleteFavoriteRepository< FavoriteLocalDataSource>>,
+        Interactor<String, Bool, CheckFavoriteRepository< FavoriteLocalDataSource>>
+    >?
+    
     var idGame: Int?
     var disposeBag = DisposeBag()
     
@@ -41,12 +52,12 @@ class GameDetailViewController: UIViewController {
     
     @objc func favoriteTapped() {
         if let gameData = self.gameDetail {
-            presenter?.addGame(game: gameData)
+            presenter?.addFavoriteGame(request: gameData)
         }
     }
     @objc func unfavoriteTapped() {
-        if let idGameDate = self.idGame {
-            presenter?.removeGame(gameId: idGameDate)
+        if let idGameData = self.idGame {
+            presenter?.deleteFavoriteGame(request: "\(idGameData)")
         }
     }
     
@@ -70,19 +81,19 @@ class GameDetailViewController: UIViewController {
             onNext: { message in
                 print("error message:\(message)")
             }).disposed(by: disposeBag)
-        presenter?.addGameStatus.subscribe(
+        presenter?.addStatus.subscribe(
             onNext: { status in
                 if status {
                     self.navigationItem.setRightBarButton( self.unfavoriteButton, animated: true)
                 }
             }).disposed(by: disposeBag)
-        presenter?.removeGameStatus.subscribe(
+        presenter?.deleteStatus.subscribe(
             onNext: { status in
                 if status {
                     self.navigationItem.setRightBarButton( self.favoriteButton, animated: true)
                 }
             }).disposed(by: disposeBag)
-        presenter?.isGameFavorite.subscribe(
+        presenter?.favoriteStatus.subscribe(
             onNext: { isFavorite in
                 if isFavorite {
                     self.navigationItem.setRightBarButton( self.unfavoriteButton, animated: true)
@@ -94,8 +105,8 @@ class GameDetailViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         if let gameId = idGame {
-            presenter?.getGamesDetal(idGames: "\(gameId)")
-            presenter?.checkIsFavoriteGameExist(idGame: gameId)
+            presenter?.getGameDetail(request: "\(gameId)")
+            presenter?.checkFavoriteGame(request: "\(gameId)")
         }
     }
     

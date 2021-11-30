@@ -1,6 +1,8 @@
 disabled_rules:
 - trailing_whitespace
 - type_name
+- force_try
+- force_cast
 
 opt_in_rules:
 - empty_count
