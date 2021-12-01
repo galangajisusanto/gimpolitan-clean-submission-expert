@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		033722B2275733DB0099803A /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 033722B4275733DB0099803A /* ProfileViewController.xib */; };
 		034B1F41274902BC003C7C48 /* Favorite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 034B1F40274902BC003C7C48 /* Favorite.framework */; };
 		034B1F42274902BC003C7C48 /* Favorite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 034B1F40274902BC003C7C48 /* Favorite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		034B1F45274902C5003C7C48 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 034B1F44274902C5003C7C48 /* Core.framework */; };
@@ -23,7 +24,6 @@
 		03BA8FB1273EC12D004461DA /* GameDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BA8FAF273EC12D004461DA /* GameDetailViewController.swift */; };
 		03BA8FB2273EC12D004461DA /* GameDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03BA8FB0273EC12D004461DA /* GameDetailViewController.xib */; };
 		03C02817273F52FE00566F92 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C02815273F52FE00566F92 /* ProfileViewController.swift */; };
-		03C02818273F52FE00566F92 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03C02816273F52FE00566F92 /* ProfileViewController.xib */; };
 		03C0281B273F58C200566F92 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C02819273F58C200566F92 /* EditProfileViewController.swift */; };
 		03C0281C273F58C200566F92 /* EditProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03C0281A273F58C200566F92 /* EditProfileViewController.xib */; };
 		03CBCB392740BC4E0056A685 /* FavoriteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CBCB372740BC4E0056A685 /* FavoriteTableViewController.swift */; };
@@ -74,6 +74,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		033722B3275733DB0099803A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ProfileViewController.xib; sourceTree = "<group>"; };
+		033722B6275733E60099803A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ProfileViewController.strings; sourceTree = "<group>"; };
+		033722B8275733E80099803A /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/ProfileViewController.strings; sourceTree = "<group>"; };
 		034B1F40274902BC003C7C48 /* Favorite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Favorite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		034B1F44274902C5003C7C48 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0376F9D3274A822900007EC5 /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
@@ -92,7 +95,6 @@
 		03BA8FAF273EC12D004461DA /* GameDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailViewController.swift; sourceTree = "<group>"; };
 		03BA8FB0273EC12D004461DA /* GameDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameDetailViewController.xib; sourceTree = "<group>"; };
 		03C02815273F52FE00566F92 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		03C02816273F52FE00566F92 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		03C02819273F58C200566F92 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		03C0281A273F58C200566F92 /* EditProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfileViewController.xib; sourceTree = "<group>"; };
 		03CBCB372740BC4E0056A685 /* FavoriteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewController.swift; sourceTree = "<group>"; };
@@ -228,7 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				03C02815273F52FE00566F92 /* ProfileViewController.swift */,
-				03C02816273F52FE00566F92 /* ProfileViewController.xib */,
+				033722B4275733DB0099803A /* ProfileViewController.xib */,
 				03C02819273F58C200566F92 /* EditProfileViewController.swift */,
 				03C0281A273F58C200566F92 /* EditProfileViewController.xib */,
 			);
@@ -475,7 +477,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03C02818273F52FE00566F92 /* ProfileViewController.xib in Resources */,
+				033722B2275733DB0099803A /* ProfileViewController.xib in Resources */,
 				03A8295A2737A86D00A3D19D /* LaunchScreen.storyboard in Resources */,
 				03CBCB3A2740BC4E0056A685 /* FavoriteTableViewController.xib in Resources */,
 				03BA8FB2273EC12D004461DA /* GameDetailViewController.xib in Resources */,
@@ -676,6 +678,16 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		033722B4275733DB0099803A /* ProfileViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				033722B3275733DB0099803A /* Base */,
+				033722B6275733E60099803A /* en */,
+				033722B8275733E80099803A /* id */,
+			);
+			name = ProfileViewController.xib;
+			sourceTree = "<group>";
+		};
 		03A829532737A86C00A3D19D /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

@@ -13,6 +13,12 @@ class EditProfileViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var biographyTextField: UITextField!
     @IBOutlet weak var hobbyTextField: UITextField!
+    @IBOutlet weak var closeButton: UIBarButtonItem!
+    @IBOutlet weak var saveButton: UIBarButtonItem!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var biographyLabel: UILabel!
+    @IBOutlet weak var hobbyLabel: UILabel!
+    @IBOutlet weak var navItem: UINavigationItem!
     var saveCallback: (() -> Void)?
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +32,12 @@ class EditProfileViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     private func bindToView() {
+        closeButton.title = "close".localized()
+        saveButton.title = "save".localized()
+        nameLabel.text = "name".localized()
+        biographyLabel.text = "biography".localized()
+        hobbyLabel.text = "hobby".localized()
+        navItem.title = "edit_profile".localized()
         nameTextField.text = Profile.name
         biographyTextField.text = Profile.biography
         hobbyTextField.text = Profile.hobby

@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Swinject
 import RealmSwift
 import Core
 import Game

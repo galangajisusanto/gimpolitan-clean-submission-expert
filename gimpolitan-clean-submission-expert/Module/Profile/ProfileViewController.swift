@@ -11,9 +11,13 @@ import Core
 class ProfileViewController: UIViewController {
     
     @IBOutlet weak var imgProfile: UIImageView!
+    @IBOutlet weak var closeButton: UIBarButtonItem!
+    @IBOutlet weak var navItem: UINavigationItem!
+    @IBOutlet weak var editButton: UIBarButtonItem!
     @IBOutlet weak var txtName: UILabel!
     @IBOutlet weak var txtShortBiography: UILabel!
     @IBOutlet weak var txtHobby: UILabel!
+    @IBOutlet weak var txtBiography: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         setupProfileImage()
@@ -32,6 +36,10 @@ class ProfileViewController: UIViewController {
         present(editProfileVC, animated: true)
     }
     private func setupProfileImage() {
+        closeButton.title = "close".localized()
+        editButton.title = "edit".localized()
+        navItem.title = "about_developer".localized()
+        txtBiography.text = "biography".localized()
         imgProfile.image = UIImage(named: "GalangAji")
         imgProfile.setupCorners(cornerRadius: .circle)
     }

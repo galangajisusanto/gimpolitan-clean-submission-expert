@@ -15,9 +15,9 @@ import Common
 class TabBarController: UITabBarController, UITabBarControllerDelegate {
     let scene = UIApplication.shared.connectedScenes.first
     let injection = Injection()
-
+    
     private lazy var game: UIViewController = {
-            let gameViewController = GameTableViewController()
+        let gameViewController = GameTableViewController()
         let gameUseCase: Interactor<
             String,
             [GameModel],
@@ -28,16 +28,16 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         
         let homePresenter = GetListPresenter(useCase: gameUseCase)
         gameViewController.presenter = homePresenter
-            gameViewController.tabBarItem = UITabBarItem(
-                title: "GimPolitan".localized(),
-                image: UIImage(systemName: "gamecontroller"),
-                selectedImage: UIImage(systemName: "gamecontroller.fill"))
-            return UINavigationController(rootViewController: gameViewController)
-       
+        gameViewController.tabBarItem = UITabBarItem(
+            title: "games".localized(),
+            image: UIImage(systemName: "gamecontroller"),
+            selectedImage: UIImage(systemName: "gamecontroller.fill"))
+        return UINavigationController(rootViewController: gameViewController)
+        
     }()
     private lazy var favorite: UIViewController = {
         let favoriteViewController = FavoriteTableViewController()
-
+        
         let favoriteUseCase: Interactor<
             String,
             [GameModel],
@@ -48,11 +48,11 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         
         let favoritePresenter = GetListPresenter(useCase: favoriteUseCase)
         favoriteViewController.presenter = favoritePresenter
-            favoriteViewController.tabBarItem = UITabBarItem(
-                title: "my_favorite".localized(),
-                image: UIImage(systemName: "gamecontroller"),
-                selectedImage: UIImage(systemName: "gamecontroller.fill"))
-            return UINavigationController(rootViewController: favoriteViewController)
+        favoriteViewController.tabBarItem = UITabBarItem(
+            title: "my_favorites".localized(),
+            image: UIImage(systemName: "heart.circle"),
+            selectedImage: UIImage(systemName: "heart.circle.fill"))
+        return UINavigationController(rootViewController: favoriteViewController)
     }()
     override func viewDidLoad() {
         super.viewDidLoad()

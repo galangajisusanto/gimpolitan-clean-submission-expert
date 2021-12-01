@@ -1,0 +1,21 @@
+
+/* Class = "UINavigationItem"; title = "About Developer"; ObjectID = "0U4-J9-N9g"; */
+"0U4-J9-N9g.title" = "About Developer";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "CIr-jq-hKV"; */
+"CIr-jq-hKV.text" = "Name";
+
+/* Class = "UILabel"; text = "Interest / hobby"; ObjectID = "Fjy-fv-gcE"; */
+"Fjy-fv-gcE.text" = "Interest / hobby";
+
+/* Class = "UILabel"; text = "Short biography"; ObjectID = "IHd-ab-3sy"; */
+"IHd-ab-3sy.text" = "Short biography";
+
+/* Class = "UIBarButtonItem"; title = "Edit"; ObjectID = "UnW-Pj-CKV"; */
+"UnW-Pj-CKV.title" = "Edit";
+
+/* Class = "UIBarButtonItem"; title = "Close"; ObjectID = "aYN-WV-fhL"; */
+"aYN-WV-fhL.title" = "Close";
+
+/* Class = "UILabel"; text = "BIOGRAPHY"; ObjectID = "eHW-r7-Re8"; */
+"eHW-r7-Re8.text" = "BIOGRAPHY";

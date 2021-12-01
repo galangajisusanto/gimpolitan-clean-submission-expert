@@ -38,7 +38,7 @@ class FavoriteTableViewController: UITableViewController {
         presenter?.getList(request: name)
     }
     private func bindToNavigationView() {
-        title = "Favorites"
+        title = "my_favorites".localized()
         navigationController?.navigationBar.prefersLargeTitles = true
         self.searchController.searchBar.delegate = self
         self.navigationItem.searchController = searchController

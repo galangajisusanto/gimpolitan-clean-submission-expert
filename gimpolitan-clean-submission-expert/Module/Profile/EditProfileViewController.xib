@@ -11,9 +11,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditProfileViewController" customModule="gimpolitan_clean_submission_expert" customModuleProvider="target">
             <connections>
+                <outlet property="biographyLabel" destination="DCX-zx-7uH" id="sS0-7s-bh5"/>
                 <outlet property="biographyTextField" destination="Cj1-c0-L0q" id="0Rp-GH-JvM"/>
+                <outlet property="closeButton" destination="htU-vW-6Lg" id="877-sP-f5Q"/>
+                <outlet property="hobbyLabel" destination="RUe-Jv-LZZ" id="mW9-jM-qQ9"/>
                 <outlet property="hobbyTextField" destination="dWX-j8-8pv" id="6m5-Je-Eph"/>
+                <outlet property="nameLabel" destination="co9-vM-l9k" id="jFH-7f-0G6"/>
                 <outlet property="nameTextField" destination="7tq-MZ-HBB" id="Ma4-1a-J7c"/>
+                <outlet property="navItem" destination="7pX-Iy-eho" id="Lu0-N8-Aj9"/>
+                <outlet property="saveButton" destination="dF4-h5-H1t" id="Wqt-2Q-PLy"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

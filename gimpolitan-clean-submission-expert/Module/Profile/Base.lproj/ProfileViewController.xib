@@ -11,7 +11,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController" customModule="gimpolitan_clean_submission_expert" customModuleProvider="target">
             <connections>
+                <outlet property="closeButton" destination="aYN-WV-fhL" id="fof-nP-Ynr"/>
+                <outlet property="editButton" destination="UnW-Pj-CKV" id="EvK-GL-UNC"/>
                 <outlet property="imgProfile" destination="czd-eH-Cvm" id="I65-yL-l4G"/>
+                <outlet property="navItem" destination="0U4-J9-N9g" id="ixg-Yk-Wtn"/>
+                <outlet property="txtBiography" destination="eHW-r7-Re8" id="HRU-mS-9a8"/>
                 <outlet property="txtHobby" destination="Fjy-fv-gcE" id="DcT-cC-EEg"/>
                 <outlet property="txtName" destination="CIr-jq-hKV" id="2yD-l1-ttn"/>
                 <outlet property="txtShortBiography" destination="IHd-ab-3sy" id="gFr-1L-qVg"/>
@@ -57,6 +61,9 @@
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="biography"/>
+                                    </userDefinedRuntimeAttributes>
                                 </label>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="czd-eH-Cvm">
                                     <rect key="frame" x="143" y="8" width="128" height="128"/>

@@ -3,6 +3,8 @@ disabled_rules:
 - type_name
 - force_try
 - force_cast
+- generic_type_name
+- identifier_name
 
 opt_in_rules:
 - empty_count

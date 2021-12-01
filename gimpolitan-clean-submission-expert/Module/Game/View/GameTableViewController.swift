@@ -37,7 +37,7 @@ class GameTableViewController: UITableViewController {
         let image = UIImage(systemName: "info.circle")
         let button = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(infoButtonClicked) )
         button.tintColor = UIColor(named: "PrimaryColor")
-        title = "GimPolitan"
+        title = "gimpolitan".localized()
         navigationController?.navigationBar.prefersLargeTitles = true
         self.searchController.searchBar.delegate = self
         self.navigationItem.rightBarButtonItem  = button

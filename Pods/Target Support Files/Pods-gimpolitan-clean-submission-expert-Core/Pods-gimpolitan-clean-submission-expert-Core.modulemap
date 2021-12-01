@@ -1,0 +1,6 @@
+framework module Pods_gimpolitan_clean_submission_expert_Core {
+  umbrella header "Pods-gimpolitan-clean-submission-expert-Core-umbrella.h"
+
+  export *
+  module * { export * }
+}
