@@ -9,9 +9,6 @@
 /* Begin PBXBuildFile section */
 		033722B2275733DB0099803A /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 033722B4275733DB0099803A /* ProfileViewController.xib */; };
 		034B1F41274902BC003C7C48 /* Favorite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 034B1F40274902BC003C7C48 /* Favorite.framework */; };
-		034B1F42274902BC003C7C48 /* Favorite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 034B1F40274902BC003C7C48 /* Favorite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		034B1F45274902C5003C7C48 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 034B1F44274902C5003C7C48 /* Core.framework */; };
-		034B1F46274902C5003C7C48 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 034B1F44274902C5003C7C48 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0376F9D4274A822900007EC5 /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0376F9D3274A822900007EC5 /* Injection.swift */; };
 		03A8294E2737A86C00A3D19D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A8294D2737A86C00A3D19D /* AppDelegate.swift */; };
 		03A829502737A86C00A3D19D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A8294F2737A86C00A3D19D /* SceneDelegate.swift */; };
@@ -57,21 +54,6 @@
 			remoteInfo = "gimpolitan-clean-submission-expert";
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		034B1F43274902BC003C7C48 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				034B1F42274902BC003C7C48 /* Favorite.framework in Embed Frameworks */,
-				034B1F46274902C5003C7C48 /* Core.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		033722B3275733DB0099803A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ProfileViewController.xib; sourceTree = "<group>"; };
@@ -128,7 +110,6 @@
 				034B1F41274902BC003C7C48 /* Favorite.framework in Frameworks */,
 				03FBB55B2748F3A90081E545 /* Game.framework in Frameworks */,
 				CD0BB1F676A326A866896839 /* Pods_gimpolitan_clean_submission_expert.framework in Frameworks */,
-				034B1F45274902C5003C7C48 /* Core.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,7 +359,6 @@
 				03A829482737A86C00A3D19D /* Resources */,
 				03D6A9EE273801B5002EAE68 /* ShellScript */,
 				5955EC7B6072C918AA8C347C /* [CP] Embed Pods Frameworks */,
-				034B1F43274902BC003C7C48 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

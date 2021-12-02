@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_gimpolitan_clean_submission_expert_CoreVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_gimpolitan_clean_submission_expert_CoreVersionString[];
+FOUNDATION_EXPORT double CoreVersionNumber;
+FOUNDATION_EXPORT const unsigned char CoreVersionString[];
 

@@ -1,6 +1,8 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
+source 'https://github.com/galangajisusanto/Gimpolitan-Corepodspec'
+
 use_frameworks!
 
 workspace 'Modularization'
@@ -22,9 +24,7 @@ workspace 'Modularization'
     project '../favorite/Favorite'
   end
 
-  target 'Core' do
-    project '../Core/Core'
-  end
+  pod 'Core'
 
   target 'Common' do
     project '../Common/Common'
