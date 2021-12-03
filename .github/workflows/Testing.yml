@@ -14,11 +14,9 @@ jobs:
       # Runs a single command using the runners shell
       - name: Force XCode 12.4
         run: sudo xcode-select -switch /Applications/Xcode_12.4.app
-      - name: running unit testing
-        run: xcodebuild test -scheme gimpolitan-clean-submission-expert -workspace gimpolitan-clean-submission-expert.xcworkspace -destination platform=iOS\ Simulator,OS=14.4,name=iPhone\ 12 \ | xcpretty && exit ${PIPESTATUS[0]}
       - name: Testing iOS app
         run:
-          xcodebuild -workspace gimpolitan-clean-submission-expert.xcworkspace \
+          xcodebuild test -workspace gimpolitan-clean-submission-expert.xcworkspace \
           -scheme gimpolitan-clean-submission-expert\ iOS \
           -destination platform=iOS\ Simulator,OS=14.4,name=iPhone\ 12 \
           clean test | xcpretty
