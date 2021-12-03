@@ -6,12 +6,13 @@ on:
     branches: [ main ]
 jobs:
   test:
-    name: Testing Swift Package and iOS app
+    name: Testing iOS app
     runs-on: macOS-10.15
     steps:
+     - name: Checkout repository
+       uses: actions/checkout@v1
      # Runs a single command using the runners shell
      - name: Force XCode 12.4
-       run: sudo xcode-select -switch /Applications/Xcode_12.4.app && /usr/bin/xcodebuild -version
-     # Runs a set of commands using the runners shell
+       run: sudo xcode-select -switch /Applications/Xcode_12.4.app
      - name: Testing iOS app
-       run: exec .github/scripts/test_app.sh
+       run: exec ./.github/scripts/test_app.sh     
