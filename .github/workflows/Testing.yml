@@ -19,7 +19,3 @@ jobs:
           xcodebuild test -workspace gimpolitan-clean-submission-expert.xcworkspace \
           -scheme gimpolitan-clean-submission-expert\ iOS \
           -destination platform=iOS\ Simulator,OS=14.4,name=iPhone\ 12 \
-          clean test | xcpretty
-      - name: Testing iOS app 2
-        run:
-          xcodebuild test -workspace gimpolitan-clean-submission-expert.xcworkspace -scheme gimpolitan-clean-submission-expert -destination "platform=iOS\ Simulator,OS=14.4,name=iPhone"
